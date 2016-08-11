@@ -12,3 +12,8 @@
 *.o
 *.a
 mkmf.log
+
+!/.editorconfig
+!/.github
+!/.rspec
+!/.travis.yml

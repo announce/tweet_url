@@ -1,6 +1,7 @@
-# TweetUrl
+TweetUrl
+===
 
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/announce/tweet_url.svg?branch=master)](https://travis-ci.org/announce/tweet_url)
 
 ## Installation
 
@@ -20,12 +21,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply,
 
-## Contributing
+```rb
+require 'tweet_url'
 
-1. Fork it ( https://github.com/[my-github-username]/tweet_url/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+tweet_url = TweetUrl.parse('https://twitter.com/yukihiro_matz/status/755950562227605504')
+tweet_url.username  #=> "yukihiro_matz"
+tweet_url.status_id  #=> 755950562227605504
+```
+
+To handle URL containing multibyte chars, run `gem install addressable` and
+
+```rb
+require 'addressable/uri'
+require 'tweet_url'
+
+tweet_url = TweetUrl.parse(
+  'https://twitter.com/yukihiro_matz/status/755950562227605504#尾骶骨',
+  parser: Addressable::URI)
+tweet_url.username  #=> "yukihiro_matz"
+tweet_url.status_id  #=> 755950562227605504
+```
