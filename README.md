@@ -26,9 +26,9 @@ Simply,
 ```rb
 require 'tweet_url'
 
-tweet_url = TweetUrl.parse('https://twitter.com/yukihiro_matz/status/755950562227605504')
-tweet_url.username  #=> "yukihiro_matz"
-tweet_url.status_id  #=> 755950562227605504
+tweet_url = TweetUrl.parse('https://twitter.com/jack/status/761304654147784704/photo/1')
+tweet_url.username  #=> "jack"
+tweet_url.status_id  #=> 761304654147784704
 ```
 
 To handle URL containing multibyte chars, run `gem install addressable` and
