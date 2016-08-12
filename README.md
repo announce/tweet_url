@@ -2,6 +2,7 @@ TweetUrl
 ===
 
 [![Build Status](https://travis-ci.org/announce/tweet_url.svg?branch=master)](https://travis-ci.org/announce/tweet_url)
+[![Gem Version](https://badge.fury.io/rb/tweet_url.svg)](https://badge.fury.io/rb/tweet_url)
 
 ## Installation
 
